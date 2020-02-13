@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>{{ title }} </title>
+    </head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            my world
+        </div>
+        <div class="col-3">
+            my other world
+        </div>
+        <div class="col-3">
+            my last world
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>Sales Funnel Report - National</h2>
+            {{ name }}
+        </div>
+    </div>
+    <div class="row">
+        {% include "summary.html" %}
+    </div>
+    {% for manager in managers %}
+        <p style="page-break-before: always" ></p>
+        <div class="row">
+            <div class="row">Sales Funnel Report - {{manager["name"]}}</div>
+            <div class="row">
+
+                {{manager["car"]}}
+            </div>
+        </div>
+        {% include "summary.html" %}
+    {% endfor %}
+</div>
+</body>
+</html>
