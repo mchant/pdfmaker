@@ -1,0 +1,39 @@
+h1 { font-family: "SMA Futura Global" }
+@page {
+    size: letter landscape; /* Change from the default size of A4 */
+    margin: 2.5cm; /* Set margin on each page */
+}
+div.header {
+    display: block; text-align: center; 
+    position: running(header);
+}
+div.footerleft {
+    display: block; text-align: left;
+    position: fixed;
+    bottom: -1cm;
+    left: 1cm;
+    /* position: running(footer); */
+}
+div.footerright {
+    display: block; text-align: right;
+    position: fixed;
+    bottom: -1cm;
+    right: 1cm;
+    position: running(footer);
+}
+@page {
+    @top-center { content: element(header) }
+}
+@page { 
+    @bottom-center { content: element(footer) }
+}
+.dude{
+    width:100px;
+    height:100px;
+}
+.myheader{
+    position: fixed; top: -1cm; left: 1cm;
+}
+.myfooter{
+    position: fixed; bottom: -1cm; left: 1cm;
+}
