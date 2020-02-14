@@ -2,7 +2,7 @@
 <html>
     <head lang="en">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
         <title>{{ title }} </title>
     </head>
 <body>
@@ -25,18 +25,47 @@
         </div>
     </div>
     <div class="row">
-        {% include "summary.html" %}
+        <div class="column">
+            {% include "summary.html" %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img class="dude" src="{{ image }}"/>
+        </div>
     </div>
     {% for manager in managers %}
-        <p style="page-break-before: always" ></p>
+    <p style="page-break-before: always" ></p>
+        <div class="row header">
+            <div class="column">
+                header stuffjjjj
+            </div>
+        </div>
         <div class="row">
-            <div class="row">Sales Funnel Report - {{manager["name"]}}</div>
-            <div class="row">
-
+            <div class="column">
+                Sales Funnel Report - {{manager["name"]}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
                 {{manager["car"]}}
             </div>
         </div>
-        {% include "summary.html" %}
+        <div class="row">
+            <div class="column">
+                {% include "summary.html" %}
+            </div>
+        </div>
+    <div class="row footerleft">
+        <div span="col-md-6">
+            footer stxxxxxxxxxxxuffss
+        </div>
+    </div>
+    <div class="row footerright">
+        <div span="col-md-6">
+            page {{ loop.index }}
+        </div>
+    </div>
     {% endfor %}
 </div>
 </body>
