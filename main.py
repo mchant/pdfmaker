@@ -1,6 +1,7 @@
 from weasyprint import HTML, CSS
 from weasyprint.fonts import FontConfiguration
 from jinja2 import Environment, FileSystemLoader
+import pandas as pd
 
 
 font_config = FontConfiguration()
